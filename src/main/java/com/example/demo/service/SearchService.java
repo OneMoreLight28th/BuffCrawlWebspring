@@ -1,4 +1,4 @@
-package com.example.demo.Service;
+package com.example.demo.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,8 +15,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-
-
+/**
+ * 搜索
+ */
 @Service
 public class SearchService {
 

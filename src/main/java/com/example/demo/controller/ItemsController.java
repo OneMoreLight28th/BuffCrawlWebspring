@@ -1,6 +1,6 @@
-package com.example.demo.Controller;
+package com.example.demo.controller;
 
-import com.example.demo.Service.ItemsService;
+import com.example.demo.service.ItemsService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;

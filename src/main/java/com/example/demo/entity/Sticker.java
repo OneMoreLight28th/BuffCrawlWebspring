@@ -1,4 +1,4 @@
-package com.example.demo.Impclass;
+package com.example.demo.entity;
 
 import org.bson.types.Binary;
 

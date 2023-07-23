@@ -1,4 +1,4 @@
-package com.example.demo.Service;
+package com.example.demo.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -10,6 +10,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
+/**
+ * 商品主界面
+ */
 
 @Service
 public class ItemsService {

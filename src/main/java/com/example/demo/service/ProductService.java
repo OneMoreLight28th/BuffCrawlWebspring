@@ -1,7 +1,7 @@
-package com.example.demo.Service;
+package com.example.demo.service;
 
-import com.example.demo.Impclass.ProductDocument;
-import com.example.demo.Impclass.Sticker;
+import com.example.demo.entity.ProductDocument;
+import com.example.demo.entity.Sticker;
 import com.mongodb.client.*;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Sorts;
@@ -23,6 +23,12 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
+
+
+/**
+ * 成交记录
+ */
+
 
 @Service
 public class ProductService {
@@ -56,7 +62,6 @@ public class ProductService {
 
         // 按时间戳字段进行倒序排序
         Bson sort = Sorts.descending("timestamp");
-
 
 
         // 执行查询操作，获取商品文档列表，并按照时间戳字段倒序排序
