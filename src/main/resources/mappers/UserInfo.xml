@@ -2,19 +2,22 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.demo.dao.UserDao">
+<mapper namespace="com.example.demo.dao.UserRepository">
     <!-- 根据用户ID查询用户信息 ,注意resultType路径-->
 
+    <!-- 查询语句 -->
     <select id="getUserById" resultType="com.example.demo.entity.User">
         SELECT *
-        FROM account
-        WHERE userid = #{userId}
+        FROM cs_account
+        WHERE user_id = #{userId}
     </select>
 
-    <!-- 插入用户信息 -->
+    <!-- 插入语句 -->
     <insert id="insertUser" parameterType="com.example.demo.entity.User">
-        INSERT INTO account (userid, pwssword)
-        VALUES (#{userId}, #{password})
+        INSERT INTO cs_account (user_id, user_pwd)
+        VALUES (#{userId}, #{userPwd})
     </insert>
+
+
 </mapper>
 

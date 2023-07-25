@@ -1,18 +1,25 @@
 package com.example.demo.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "cs_account")
 public class User {
+
+    @Id
+    @Column(name = "user_id")
     private String userId;
-    private String password;
+
+    @Column(name = "user_pwd")
+    private String userPwd;
 
     public User() {
     }
 
-    public User(String userId, String password) {
-        this.userId = userId;
-        this.password = password;
-    }
-
-
+    // getter和setter方法按照默认的命名规则，因为它们与字段名一致。
     public String getUserId() {
         return userId;
     }
@@ -21,20 +28,11 @@ public class User {
         this.userId = userId;
     }
 
-    public String getPassword() {
-        return password;
+    public String getUserPwd() {
+        return userPwd;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    // toString method for debugging purposes
-    @Override
-    public String toString() {
-        return "User{" +
-                "userId='" + userId + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+    public void setUserPwd(String userPwd) {
+        this.userPwd = userPwd;
     }
 }
