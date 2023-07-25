@@ -10,6 +10,11 @@ import org.springframework.web.bind.annotation.*;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.List;
+
+/**
+ * 成交记录
+ */
+
 @RestController
 @CrossOrigin(origins = "http://localhost:8080")
 public class TransactionController {

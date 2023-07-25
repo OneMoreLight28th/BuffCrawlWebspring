@@ -5,6 +5,10 @@ import org.bson.types.Binary;
 import java.time.LocalDateTime;
 import java.util.List;
 
+/**
+ * 商品主属性
+ */
+
 public class ProductDocument {
 
     private String name;

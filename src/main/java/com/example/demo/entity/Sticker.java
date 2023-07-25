@@ -2,6 +2,10 @@ package com.example.demo.entity;
 
 import org.bson.types.Binary;
 
+/**
+ * 贴纸属性
+ */
+
 public class Sticker {
     private String name;
     private int slot;

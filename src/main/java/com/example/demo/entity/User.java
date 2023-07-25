@@ -5,6 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * 用户实体类
+ */
+
 @Entity
 @Table(name = "cs_account")
 public class User {
