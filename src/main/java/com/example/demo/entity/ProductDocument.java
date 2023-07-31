@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 /**
- * 商品主属性
+ * 商品实体类
  */
 
 public class ProductDocument {

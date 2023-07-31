@@ -3,7 +3,7 @@ package com.example.demo.entity;
 import org.bson.types.Binary;
 
 /**
- * 贴纸属性
+ * 贴纸实体类
  */
 
 public class Sticker {

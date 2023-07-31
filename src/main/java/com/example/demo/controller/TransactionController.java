@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 /**
@@ -32,9 +33,8 @@ public class TransactionController {
             @RequestParam(name = "pageSize", defaultValue = "10") int pageSize) throws UnsupportedEncodingException {
 
         // 解码URL参数
-        String decodedName = URLDecoder.decode(name, "UTF-8");
+        String decodedName = URLDecoder.decode(name, StandardCharsets.UTF_8);
 
-        // 调用 ProductService 的方法，根据传入的 decodedName、page 和 pageSize 进行分页查询
         ResponseEntity<List<ProductDocument>> response = productService.getProductInfo(decodedName, page, pageSize);
 
         if (response.getStatusCode() == HttpStatus.NOT_FOUND) {

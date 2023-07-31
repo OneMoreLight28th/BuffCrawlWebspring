@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
+
 /**
  * 搜索
  */
@@ -31,9 +32,10 @@ public class SearchService {
 
     public String search(String query, Integer page, Integer pageSize) throws JsonProcessingException {
         MongoDatabase database = databaseService.getDatabase("csgo_items");
-        MongoCollection<Document> collection = database.getCollection("items");
+        MongoCollection<Document> collection = database.getCollection("newcsgo_items");
 
         String escapedQuery = Pattern.quote(query);
+        System.out.println(escapedQuery);
 
         Bson filter = Filters.regex("name", escapedQuery, "i");
         List<Document> pageItems = executeQuery(filter, page, pageSize);
@@ -41,6 +43,7 @@ public class SearchService {
         long totalItems = collection.countDocuments(filter);
         long totalPages = (totalItems + pageSize - 1) / pageSize;
 
+        System.out.println(totalItems);
 
         Map<String, Object> result = new HashMap<>();
         result.put("items", pageItems);
