@@ -39,11 +39,9 @@ public class SearchService {
 
         Bson filter = Filters.regex("name", escapedQuery, "i");
         List<Document> pageItems = executeQuery(filter, page, pageSize);
-        // 查询满足条件的记录数
+
         long totalItems = collection.countDocuments(filter);
         long totalPages = (totalItems + pageSize - 1) / pageSize;
-
-        System.out.println(totalItems);
 
         Map<String, Object> result = new HashMap<>();
         result.put("items", pageItems);

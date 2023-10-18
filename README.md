@@ -6,7 +6,7 @@
 
 ## 技术栈
 
-- 后端：Spring Boot
+- 后端：Spring Boot + mybatis
 - 数据库：MongoDB + MySQL
 - 前端：Vue.js
 

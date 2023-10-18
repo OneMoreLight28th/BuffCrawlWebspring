@@ -17,7 +17,6 @@ import java.util.List;
  */
 
 @RestController
-@CrossOrigin(origins = "http://localhost:8080")
 public class TransactionController {
 
     private final ProductService productService;
@@ -38,10 +37,8 @@ public class TransactionController {
         ResponseEntity<List<ProductDocument>> response = productService.getProductInfo(decodedName, page, pageSize);
 
         if (response.getStatusCode() == HttpStatus.NOT_FOUND) {
-            // 如果查询结果为空，返回 404 Not Found
             return ResponseEntity.notFound().build();
         } else {
-            // 返回查询结果
             return response;
         }
     }

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 
 /**
- * 商品主界面
+ * 商品展示
  */
 
 @Service

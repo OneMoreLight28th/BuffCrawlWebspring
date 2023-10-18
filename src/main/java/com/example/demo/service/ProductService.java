@@ -55,10 +55,8 @@ public class ProductService {
         logger.info("查询信息:{}", query);
 
         int startIndex = (page - 1) * pageSize;
-        System.out.println("startIndex: " + startIndex);
-        System.out.println("pageSize: " + pageSize);
-
-        System.out.println("查询条件 query: " + query);
+//        System.out.println("startIndex: " + startIndex);
+//        System.out.println("pageSize: " + pageSize);
 
         // 按时间戳字段进行倒序排序
         Bson sort = Sorts.descending("timestamp");
