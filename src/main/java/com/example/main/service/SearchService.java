@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.example.main.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -31,8 +31,7 @@ public class SearchService {
     }
 
     public String search(String query, Integer page, Integer pageSize) throws JsonProcessingException {
-        MongoDatabase database = databaseService.getDatabase("csgo_items");
-        MongoCollection<Document> collection = database.getCollection("newcsgo_items");
+        MongoCollection<Document> collection = databaseService.getCollection("csgo_items", "newcsgo_items");
 
         String escapedQuery = Pattern.quote(query);
         System.out.println(escapedQuery);

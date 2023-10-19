@@ -1,8 +1,8 @@
-package com.example.demo.service;
+package com.example.main.service;
 
-import com.example.demo.Utils.JwtUtil;
-import com.example.demo.mapper.UserMapper;
-import com.example.demo.entity.User;
+import com.example.main.Utils.JwtUtil;
+import com.example.main.mapper.UserMapper;
+import com.example.main.entity.User;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

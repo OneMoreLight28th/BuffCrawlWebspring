@@ -1,7 +1,7 @@
-package com.example.demo.service;
+package com.example.main.service;
 
-import com.example.demo.entity.ProductDocument;
-import com.example.demo.entity.Sticker;
+import com.example.main.entity.ProductDocument;
+import com.example.main.entity.Sticker;
 import com.mongodb.client.*;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Sorts;
@@ -42,8 +42,8 @@ public class ProductService {
     }
 
     public ResponseEntity<List<ProductDocument>> getProductInfo(String name, int page, int pageSize) throws UnsupportedEncodingException {
-        MongoDatabase database = databaseService.getDatabase("csgo_items");
-        MongoCollection<Document> collection = database.getCollection("newcsgo_items");
+
+        MongoCollection<Document> collection = databaseService.getCollection("csgo_items", "newcsgo_items");
 
         logger.info("收到的请求: {}", name);
         logger.info("page:{},pageSize:{}", page, pageSize);
@@ -55,8 +55,7 @@ public class ProductService {
         logger.info("查询信息:{}", query);
 
         int startIndex = (page - 1) * pageSize;
-//        System.out.println("startIndex: " + startIndex);
-//        System.out.println("pageSize: " + pageSize);
+
 
         // 按时间戳字段进行倒序排序
         Bson sort = Sorts.descending("timestamp");

@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.example.main.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,7 +23,6 @@ public class User {
     public User() {
     }
 
-    // getter和setter方法按照默认的命名规则，因为它们与字段名一致。
     public String getUserId() {
         return userId;
     }

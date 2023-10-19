@@ -1,7 +1,7 @@
-package com.example.demo.controller;
+package com.example.main.controller;
 
-import com.example.demo.entity.ProductDocument;
-import com.example.demo.service.ProductService;
+import com.example.main.entity.ProductDocument;
+import com.example.main.service.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
